@@ -1,0 +1,43 @@
+@import "./varables";
+
+.product {
+  background-color: $card-color;
+  padding: 1rem;
+}
+
+.best-seller {
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+.product-model {
+  margin: 0 2rem;
+}
+
+.product-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.product-name {
+  font-weight: 900;
+  line-height: 0.8;
+  width: min-content;
+}
+
+.product-price {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.product-state {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: 500;
+  font-size: 1rem;
+}

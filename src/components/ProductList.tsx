@@ -7,7 +7,9 @@ export const ProductList = () => {
   const { dispatch, REDUCER_ACTIONS, cart } = useCart();
   const { products } = useProducts();
 
-  let pageContent: ReactElement | ReactElement[] = <p>loading...</p>;
+  let pageContent: ReactElement | ReactElement[] = (
+    <p className="loading-text">loading...</p>
+  );
 
   if (products?.length) {
     pageContent = products.map((product) => {
@@ -25,7 +27,15 @@ export const ProductList = () => {
     });
   }
 
-  const content = <main className="main">{pageContent}</main>;
+  const content = (
+    <main className="main">
+      <div className="view-products">
+        <h2 className="view-products-text">DISCOVER OUR</h2>
+        <h2 className="view-products-text">PRODUCTS</h2>
+      </div>
+      <div className="product-card">{pageContent}</div>
+    </main>
+  );
 
   return content;
 };

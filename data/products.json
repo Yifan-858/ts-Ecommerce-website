@@ -1,19 +1,19 @@
 [
   {
     "sku": "item0001",
-    "name": "Spoon01",
+    "name": "STRANER SPOON",
     "price": 149,
     "modelPath": "/kitchen01.gltf"
   },
   {
     "sku": "item0002",
-    "name": "Spoon02",
+    "name": "SALAD SPOON",
     "price": 169,
     "modelPath": "/kitchen02.gltf"
   },
   {
     "sku": "item0003",
-    "name": "Spoon03",
+    "name": "SALAD FORK",
     "price": 159,
     "modelPath": "/kitchen03.gltf"
   }

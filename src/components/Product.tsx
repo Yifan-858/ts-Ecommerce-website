@@ -19,22 +19,30 @@ export const Product = ({
   const onAddToCart = () =>
     dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } });
 
-  const itemInCart = inCart ? "→ Item in Cart: ✓" : null;
+  const itemInCart = inCart ? "In Cart: ✓" : null;
 
   const content = (
     <article className="product">
-      <KitchenCanvas modelPath={product.modelPath} />
-      <h3>{product.name}</h3>
-
-      <p>
-        {new Intl.NumberFormat("sv-SE", {
-          style: "currency",
-          currency: "SEK",
-          maximumSignificantDigits: 6,
-        }).format(product.price)}
-        {itemInCart}
-      </p>
-      <button onClick={onAddToCart}>Add to Cart</button>
+      <p className="best-seller">BEST SELLER</p>
+      <div className="product-model">
+        <KitchenCanvas modelPath={product.modelPath} />
+      </div>
+      <div className="product-info">
+        <h3 className="product-name">{product.name}</h3>
+        <p className="product-price">
+          {new Intl.NumberFormat("sv-SE", {
+            style: "currency",
+            currency: "SEK",
+            maximumSignificantDigits: 6,
+          }).format(product.price)}
+        </p>
+      </div>
+      <div className="product-state">
+        <button className="add-button" onClick={onAddToCart}>
+          Add to Cart
+        </button>
+        <p>{itemInCart}</p>
+      </div>
     </article>
   );
 

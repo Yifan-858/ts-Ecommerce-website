@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
+import "./scss/main.scss";
 
 import { CartProvider } from "./context/CartProvider.tsx";
 import { ProductsProvider } from "./context/ProductsProvider.tsx";
