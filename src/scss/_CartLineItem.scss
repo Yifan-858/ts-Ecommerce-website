@@ -1,0 +1,44 @@
+@import "./varables";
+
+.cart-item {
+  //   border: red 1px solid;
+  background-color: $card-color;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-img {
+  width: 65px;
+  height: 125px;
+}
+
+.cart-item-text {
+  margin-left: 1rem;
+}
+
+.cart-item-price {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cart-item-qty {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cart-item-subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

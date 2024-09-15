@@ -1,0 +1,10 @@
+@import "./varables";
+
+footer {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  gap: 1rem;
+}

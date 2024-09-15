@@ -23,7 +23,9 @@ export const Product = ({
 
   const content = (
     <article className="product">
-      <p className="best-seller">BEST SELLER</p>
+      <div className="drag-indicator">
+        <p className="drag-indicator-text">Drag to Rotate the Product</p>
+      </div>
       <div className="product-model">
         <KitchenCanvas modelPath={product.modelPath} />
       </div>
@@ -39,7 +41,7 @@ export const Product = ({
       </div>
       <div className="product-state">
         <button className="add-button" onClick={onAddToCart}>
-          Add to Cart
+          ADD TO CART
         </button>
         <p>{itemInCart}</p>
       </div>

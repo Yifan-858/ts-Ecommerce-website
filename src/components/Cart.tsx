@@ -12,11 +12,13 @@ export const Cart = () => {
   };
 
   const pageContent = confirm ? (
-    <h2>Thank you for your order.</h2>
+    <h2 className="thank-you-text">Thank you for your order!</h2>
   ) : (
     <>
-      <h2 className="offscreen">Cart</h2>
-      <ul className="cart">
+      <div className="cart-title">
+        <h2 className="cart-title-text">YOUR CART</h2>
+      </div>
+      <ul className="cart-list">
         {cart.map((item) => {
           return (
             <CartLineItem
@@ -36,7 +38,7 @@ export const Cart = () => {
           disabled={!totalItems}
           onClick={onSubmitOrder}
         >
-          Place Order
+          PLACE ORDER
         </button>
       </div>
     </>

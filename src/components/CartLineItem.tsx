@@ -14,8 +14,7 @@ export const CartLineItem = ({
   dispatch,
   REDUCER_ACTIONS,
 }: PropsType) => {
-  //   const img: string = new URL(`../images/${item.sku}.jpg`, import.meta.url)
-  //     .href; //get the string by using .href
+  const img: string = `/img${item.sku}.png`;
 
   const lineTotal: number = item.qty * item.price;
 
@@ -47,43 +46,54 @@ export const CartLineItem = ({
 
   const content = (
     <li className="cart-item">
-      {/* <img src={img} alt={item.name} className="cart-img" /> */}
-      <div aria-label="Item Name">{item.name}</div>
-      <div aria-label="Price per Item">
-        {new Intl.NumberFormat("sv-SE", {
-          style: "currency",
-          currency: "SEK",
-          maximumSignificantDigits: 6,
-        }).format(item.price)}
+      <div className="cart-item-info">
+        <img src={img} alt={item.name} className="cart-item-img" />
+        <div className="cart-item-text">
+          <div aria-label="Item Name" className="cart-name">
+            {item.name}
+          </div>
+          <div aria-label="Price per Item" className="cart-item-price">
+            {new Intl.NumberFormat("sv-SE", {
+              style: "currency",
+              currency: "SEK",
+              maximumSignificantDigits: 6,
+            }).format(item.price)}
+          </div>
+          <label htmlFor="itemQty" className="cart-item-qty">
+            Item Quantity
+          </label>
+          <select
+            name="itemQty"
+            id="itemQty"
+            className="cart-select"
+            value={item.qty}
+            aria-label="Item Quantity"
+            onChange={onChangeQty}
+          >
+            {options}
+          </select>
+        </div>
       </div>
-      <label htmlFor="itemQty" className="offscreen">
-        Item Quantity
-      </label>
-      <select
-        name="itemQty"
-        id="itemQty"
-        className="cart-select"
-        value={item.qty}
-        aria-label="Item Quantity"
-        onChange={onChangeQty}
-      >
-        {options}
-      </select>
-      <div className="cart-item-subtotal" aria-label="Line Item Subtotal">
-        {new Intl.NumberFormat("sv-SE", {
-          style: "currency",
-          currency: "SEK",
-          maximumSignificantDigits: 6,
-        }).format(lineTotal)}
+      <div className="cart-item-subtotal">
+        <div
+          className="cart-item-subtotal-price"
+          aria-label="Line Item Subtotal"
+        >
+          {new Intl.NumberFormat("sv-SE", {
+            style: "currency",
+            currency: "SEK",
+            maximumSignificantDigits: 6,
+          }).format(lineTotal)}
+        </div>
+        <button
+          className="cart-button"
+          aria-label="Remove Item from Cart"
+          title="Remove Item from Cart"
+          onClick={onRemoveFroMCart}
+        >
+          ✕
+        </button>
       </div>
-      <button
-        className="cart-button"
-        aria-label="Remove Item from Cart"
-        title="Remove Item from Cart"
-        onClick={onRemoveFroMCart}
-      >
-        ✕
-      </button>
     </li>
   );
 

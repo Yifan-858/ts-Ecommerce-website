@@ -3,6 +3,10 @@
 @import "./Header";
 @import "./ProductList";
 @import "./Product";
+@import "./KitchenCanvas";
+@import "./Cart";
+@import "./CartLineItem";
+@import "./Footer";
 
 * {
   margin: 0;
@@ -16,4 +20,14 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 900;
   font-style: normal;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.6rem;
+  background-color: $text-color;
+  color: $card-color;
 }
