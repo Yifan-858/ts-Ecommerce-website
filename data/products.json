@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "item0001",
+    "name": "Spoon01",
+    "price": 149,
+    "modelPath": "/kitchen01.gltf"
+  },
+  {
+    "sku": "item0002",
+    "name": "Spoon02",
+    "price": 169,
+    "modelPath": "/kitchen02.gltf"
+  },
+  {
+    "sku": "item0003",
+    "name": "Spoon03",
+    "price": 159,
+    "modelPath": "/kitchen03.gltf"
+  }
+]

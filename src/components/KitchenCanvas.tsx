@@ -10,8 +10,12 @@ type GLTFResult = {
   animations: AnimationClip[];
 };
 
-const Kitchen = () => {
-  const kitchen01 = useLoader(GLTFLoader, "/kitchen01.gltf") as GLTFResult;
+type KitchenCanvasProps = {
+  modelPath: string;
+};
+
+const Kitchen = ({ modelPath }: KitchenCanvasProps) => {
+  const kitchenModel = useLoader(GLTFLoader, modelPath) as GLTFResult;
   return (
     <>
       <ambientLight intensity={3} color="#fff" />
@@ -32,12 +36,12 @@ const Kitchen = () => {
         position={[20, 30, 50]}
       />
 
-      <primitive object={kitchen01.scene} scale={20} />
+      <primitive object={kitchenModel.scene} scale={20} />
     </>
   );
 };
 
-export const KitchenCanvas01 = () => {
+export const KitchenCanvas = ({ modelPath }: KitchenCanvasProps) => {
   return (
     <div
       className="kitchen-canvas kitchen-canvas-01"
@@ -47,7 +51,7 @@ export const KitchenCanvas01 = () => {
         camera={{ fov: 1, near: 0.1, far: 1000, position: [200, 400, 0] }}
       >
         <Suspense fallback={null}>
-          <Kitchen />
+          <Kitchen modelPath={modelPath} />
           <OrbitControls
             // autoRotate
             // autoRotateSpeed={1}

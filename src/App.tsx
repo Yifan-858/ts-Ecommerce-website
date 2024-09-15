@@ -1,12 +1,22 @@
-import { KitchenCanvas01 } from "./components/canvas/RadioCanvas";
+import { Header } from "./components/Header";
+import { ProductList } from "./components/ProductList";
+import { Cart } from "./components/Cart";
+import { Footer } from "./components/Footer";
+import { useState } from "react";
 
 function App() {
-  return (
+  const [viewCart, setViewCart] = useState(false);
+
+  const pageContent = viewCart ? <Cart /> : <ProductList />;
+
+  const content = (
     <>
-      <div>app</div>
-      <KitchenCanvas01 />
+      <Header viewCart={viewCart} setViewCart={setViewCart} />
+      {pageContent}
+      <Footer viewCart={viewCart} />
     </>
   );
-}
 
+  return content;
+}
 export default App;
