@@ -5,9 +5,21 @@
   padding: 1rem;
 }
 
-.drag-indicator-text {
-  margin: 0 0 2rem 0;
+.drag-text {
+  margin: 0 0 1rem 0;
   font-size: 0.8rem;
+}
+
+.drag-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drag-indicator-img {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .product-model {

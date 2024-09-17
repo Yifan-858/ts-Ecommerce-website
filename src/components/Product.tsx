@@ -23,8 +23,13 @@ export const Product = ({
 
   const content = (
     <article className="product">
+      <p className="drag-text">Drag to Rotate the Product</p>
       <div className="drag-indicator">
-        <p className="drag-indicator-text">Drag to Rotate the Product</p>
+        <img
+          src="/rotate.png"
+          alt="drag-indicator-img"
+          className="drag-indicator-img"
+        />
       </div>
       <div className="product-model">
         <KitchenCanvas modelPath={product.modelPath} />
