@@ -19,6 +19,13 @@
   width: 80vw;
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+  }
+
+  @include mobile {
+    width: 90vw;
+  }
 }
 
 .cart-totals {

@@ -10,6 +10,13 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
+
+  @include tablet {
+  }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
 }
 
 h1 {

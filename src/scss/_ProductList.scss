@@ -27,4 +27,12 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  @include tablet {
+  }
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

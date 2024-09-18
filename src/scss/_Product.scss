@@ -3,6 +3,13 @@
 .product {
   background-color: $card-color;
   padding: 1rem;
+
+  @include tablet {
+  }
+
+  @include mobile {
+    margin-top: 1rem;
+  }
 }
 
 .drag-text {
